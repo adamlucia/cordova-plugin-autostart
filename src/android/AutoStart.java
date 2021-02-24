@@ -55,11 +55,14 @@ public class AutoStart extends CordovaPlugin {
         if ( action.equalsIgnoreCase("enable") ) {
             enableAutoStart(cordova.getActivity().getLocalClassName(), false);
             return true;
-        } else if ( action.equalsIgnoreCase("enableService") ) {
-            final String serviceClassName = args.getString(0);
-            enableAutoStart(serviceClassName, true);
-            return true;
-        } else if ( action.equalsIgnoreCase("disable") ) {
+        }
+        // else if ( action.equalsIgnoreCase("enableService") ) {
+        //     Log.d('NOT SURE WHY THIS IS HERE');
+        //     final String serviceClassName = args.getString(0);
+        //     enableAutoStart(serviceClassName, true);
+        //     return true;
+        // } 
+        else if ( action.equalsIgnoreCase("disable") ) {
             disableAutoStart();
             return true;
         }
